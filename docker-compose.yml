@@ -21,6 +21,7 @@ services:
       - type: volume
         source: influxdb2-config
         target: /etc/influxdb2
+    restart: unless-stopped
 secrets:
   influxdb2-admin-username:
     file: ./.env.influxdb2-admin-username
